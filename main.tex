@@ -1,0 +1,93 @@
+\documentclass[conference]{IEEEtran}
+
+\newtheorem{definition}{Definition}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{moreverb}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{url}
+
+\usepackage{tikz}
+%%%%% This is used to strike out text in latex %%%%%%%%
+\usepackage[normalem]{ulem}
+\newcommand\redsout{\bgroup\markoverwith{\textcolor{red}{\rule[0.5ex]{2pt}{0.4pt}}}\ULon}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%=============================================================================
+\newtheorem{theorem}{Theorem}    [section]
+\newtheorem{remark}{Remark}   [section]
+\newtheorem{corollary}{Corollary}  [section]
+\newtheorem{lemma}{Lemma}    [section]
+\newtheorem{conjecture}{Conjecture} [section]
+\newtheorem{example}{Example}    [section]
+
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+ 
+% Figures path in the folder - Added Fkandah
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{./Figures/}} % Define the figures path %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%  Added by F.Kandah - April 27, 2018  %%%%%%%%%%%%
+                                                    %%
+\usepackage[english]{babel}                         %%
+\usepackage[autostyle,english=american]{csquotes}   %%
+\MakeOuterQuote{"}                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%% Your paper title goes here . . . . .
+\title{Forecasting Fatality Outcomes for COVID-19 in the United States of America}
+
+
+% author names and affiliations
+\author{Paul Aidan Smith \\
+\IEEEauthorblockA{\textit{College of Engineering and Computer Science} \\
+\textit{University of Tennessee at Chattanooga}\\
+Chattanooga, Tennessee \\
+4/18/2020}
+}
+
+\maketitle
+
+\begin{abstract}
+In December 2019, a novel coronavirus strain emerged in Wuhan, China.  In the following months, the spread of the pandemic has grinded the world to a halt.  Worldwide case and fatality data has been well documented for the United States of America, leading to many data scientists and epidemiologists creating models to simulate and forecast outcomes for this virus.  These models have been a bit of a mixed-bag, with some being very good and others poor. This paper sets out to analyze the spread of COVID-19 in the United States, focusing on forecasting fatality rates.  Additionally, it aims to compare and contrast this modeling with some of the largely cited models currently being used. This model attempts to adapt to different scenarios in order to analyze different outcomes from varying levels of fatality rates, population of cases, and time delay between infection and death.
+
+While the United States has observed social distancing and other minimization efforts, the healthcare demand is likely going to far exceed the supply due to the COVID-19 pandemic.  This systematic risk has been seen firsthand in countries struck earlier in the lifecycle of the spread, such as Italy and Spain.  As it spreads throughout the United States, it is very critical to get the best possible forecasts in order to properly model the fatality impacts of COVID-19. 
+
+\end{abstract}
+
+
+\input{01-Introduction}
+\input{02-Methods}
+\input{03-Results}
+\input{04-Discussion}
+\input{05-Conclusions.tex}
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+
+\end{document}
